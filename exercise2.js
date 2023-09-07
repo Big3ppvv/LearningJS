@@ -17,23 +17,35 @@ function strikes_of_golf(par,hits){
         
     }
 
-    if(hits <= par - 2){
-        console.log("Eagle");
-    }else if(hits == par - 1){
-        console.log("Birdie");
-    }else if(hits == par ){
-        console.log("Par");
-    } else if(hits == par + 1){
-        console.log("Bogey");
-    }else if(hits = par + 2){
-        console.log("Double Bogey");
-    }else if(hits >= par + 3){
-        console.log("Go Home!");
-    }
+    function strikes_of_golf(par, hits) {
+        if (!Number.isInteger(hits) || !Number.isInteger(par)) {
+            return "It isn't an Integer";
+        }
     
+        const score = hits - par;
+    
+        switch (score) {
+            case -2:
+                return "Eagle";
+            case -1:
+                return "Birdie";
+            case 0:
+                return "Par";
+            case 1:
+                return "Bogey";
+            case 2:
+                return "Double Bogey";
+            case 3:
+                return "Go home!";
+            default:
+                return "Hole in one"
+        }
+
+    }
+
 }
 
- const hits_made = 5;
- const par = 9;
-
- strikes_of_golf(par, hits_made);
+const hits_made = 5;
+const par = 9;
+const response = strikes_of_golf(par, hits_made);
+console.log(response)
