@@ -9,56 +9,31 @@ Golpes == par + 2 --> Double Bogey
 Golpes >= par + 3 --> Go home!
 */
 
-
-
 function strikes_of_golf(par,hits){
     
     
     if(Number.isInteger(hits) == false ||  (Number.isInteger(par)) == false ){
-        console.log("It isn't a Integer")
+        console.log("It isn't a Integer");
         
     }
 
-    if(hits == 1){
-        console.log("hole-in-one")
-    }
-
     if(hits <= par - 2){
-        console.log("Eagle")
-
-    }
-
-    if(hits == par - 1){
-        console.log("Birdie")
-    }
-
-    if(hits == par ){
-        console.log("Par")
-    }
-
-    if(hits == par + 1){
-        console.log("Bogey")
-    }
-
-    if(hits = par + 2){
-        console.log("Double Bogey")
+        console.log("Eagle");
+    }else if(hits == par - 1){
+        console.log("Birdie");
+    }else if(hits == par ){
+        console.log("Par");
+    } else if(hits == par + 1){
+        console.log("Bogey");
+    }else if(hits = par + 2){
+        console.log("Double Bogey");
+    }else if(hits >= par + 3){
+        console.log("Go Home!");
     }
     
-    if(hits >= par + 2){
-        console.log("Go Home!")
-    }
-    
-
-
-
 }
-
-
-
-
-
 
  const hits_made = 5;
  const par = 9;
 
- strikes_of_golf(par, hits_made)
+ strikes_of_golf(par, hits_made);
