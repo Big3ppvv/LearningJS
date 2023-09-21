@@ -1,23 +1,23 @@
 function repeated_value(list){
-    let declarator = {}
+    let object = {}
     list.forEach( (element, index ) => {
-        if(element in declarator){
-            declarator[element].push(index);
+        if(element in object){
+            object[element].push(index);
         }else{
-            declarator[element] = [index];
+            object[element] = [index];
         }
     });
     
-    let repeated = [];
-    let unique = [];
-    for(element in declarator){
-        if (declarator[element].length === 1) {
-            unique.push({"element":element, "index":declarator[element][0]});
+    const repeated = [];
+    const unique = [];
+    for(element in object){
+        if (object[element].length === 1) {
+            unique.push({"element":element, "index":object[element][0]});
         }else{
-            repeated.push({"element":element, "indexes":declarator[element]});
+            repeated.push({"element":element, "indexes":object[element]});
         }
     }
-    let response = {"original_list":list, "repeated":repeated, "unique": unique};
+    const response = {"original_list":list, "repeated":repeated, "unique": unique};
     return response
     
 }
