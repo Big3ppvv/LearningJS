@@ -1,18 +1,18 @@
-function creatingDisks(id, property, discos, valor) {
-    if(valor === ""){
-        delete discos[id][property];
+function valuate_properties(id, property, disks, value) {
+    if(value === ""){
+        delete disks[id][property];
 
     }
-    if(property === "canciones" && discos[id][property] === undefined) {
-        discos[id][property] = [].push(valor);
+    if(property === "canciones" &&disks[id][property] === undefined) {
+       disks[id][property] = [].push(value);
 
     }
-    if(property === "canciones" && valor !== ""){
-        discos[id][propiedad].push(valor);
+    if(property === "canciones" && value !== ""){
+       disks[id][propiedad].push(value);
 
     }
-    if(property !== "canciones" && valor !== "")
-        discos[id][property] = valor;
+    if(property !== "canciones" && value !== "")
+       disks[id][property] = value;
 
 }
 
@@ -30,6 +30,5 @@ const Object_Disk = {
 
 const id = 4589;
 const property = "canciones";
-const valor = "";
-
-console.log(creatingDisks(id, property, Object_Disk, valor));
+const value = "";
+console.log(creatingDisks(id, property, Object_Disk, value));
