@@ -1,19 +1,22 @@
-function creatingDisks(id, propiedad, discos, valor) {
+function creatingDisks(id, property, discos, valor) {
     if(valor === ""){
-        delete discos[id][propiedad];
+        delete discos[id][property];
 
-    }else if(propiedad === "canciones" && discos[id][propiedad] === undefined) {
-        discos[id][propiedad] = [].push(valor);
+    }
+    if(property === "canciones" && discos[id][property] === undefined) {
+        discos[id][property] = [].push(valor);
 
-    }else if(propiedad === "canciones" && valor !== ""){
+    }
+    if(property === "canciones" && valor !== ""){
         discos[id][propiedad].push(valor);
 
-    }else if(propiedad !== "canciones" && valor !== "")
-        discos[id][propiedad] = valor;
+    }
+    if(property !== "canciones" && valor !== "")
+        discos[id][property] = valor;
 
 }
 
-var coleccionDeDiscos = {
+const Object_Disk = {
     7853 : {
         titulosDelAlbum : "Bee Gees Greatest",
         artista : "Bee Gees",
@@ -26,7 +29,7 @@ var coleccionDeDiscos = {
 };
 
 const id = 4589;
-var propiedad = "canciones";
-var valor = "";
+const property = "canciones";
+const valor = "";
 
-console.log(creatingDisks(id, propiedad, coleccionDeDiscos, valor));
+console.log(creatingDisks(id, property, Object_Disk, valor));
