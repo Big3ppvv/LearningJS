@@ -4,7 +4,8 @@ const newArray = {
       0: 'taza',
       1: 'plato',
       2: 'cuchillo',
-      3: 'tenedor'
+      3: 'tenedor',
+      4: 'vaso'
     }
   }
   
