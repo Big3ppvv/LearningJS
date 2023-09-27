@@ -1,5 +1,5 @@
-function repeated_value(list){
-    let object = {}
+function repeatedValue(list){
+    const object = {}
     list.forEach( (element, index ) => {
         if(element in object){
             object[element].push(index);
@@ -22,5 +22,5 @@ function repeated_value(list){
     
 }
 const list = [0, 1, 2 ,3, 0 , 1 , 2, 3, 4];
-const repeatedUniqueValues = repeated_value(list);
+const repeatedUniqueValues = repeatedValue(list);
 console.log(repeatedUniqueValues);
