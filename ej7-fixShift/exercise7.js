@@ -14,13 +14,12 @@ const newArray = {
     if (newArray.length === 0) return;
     // Eliminar el primer elem
     const arrayAsObj = newArray.elements;
-    delete(arrayAsObj[0]);
-    for(let i = 0; i <= arrayAsObj.length; i++){
-        arrayAsObj[i] = arrayAsObj[i + 1]
+    delete arrayAsObj[0]
+    for(let i = 0; i < arrayAsObj.length - 1; i++){
+      arrayAsObj[i] = arrayAsObj[i + 1]
     }
     console.log(arrayAsObj);
   }
 
   shift(newArray);
   shift(newArray);
-  
