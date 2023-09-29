@@ -37,7 +37,7 @@ function romanTointeger(roman_number){
 
         if(roman_number[i] === "C" && roman_number[i + 1] === "M"){
             integer_number += 900;
-            i++;
+            i++; 
             continue;
         }
 
