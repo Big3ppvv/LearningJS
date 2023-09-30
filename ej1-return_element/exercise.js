@@ -2,12 +2,24 @@
 Add the number in the end of the array and next delete the first element.
 The function must return  the element that was delete */
 
-function return_element(array, num) {
+function returnElement(array, num) {
     array.push(num);
-    first_element = array.shift();
-    return first_element;
+    let firstElement;
+    const elementsCopy = [...array];
+    array.length = 0;
+    const filterElement = (element, index) => {
+        if(index === 0){
+            firstElement = element;
+            return;
+        }
+        array.push(element);
+    };
+    elementsCopy.forEach(filterElement);
+    
+    console.log(array)
 }
 
-const new_array = [5,6,7,8];
-const new_num = 9;
-const say_number = return_element(new_array, new_num);
+const numbers = [5,6,7,8];
+const newNum = 9;
+const firstNumber = returnElement(numbers, newNum);
+console.log(firstNumber)
