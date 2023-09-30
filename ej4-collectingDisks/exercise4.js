@@ -1,9 +1,16 @@
-function valuate_properties(id, property, disks, value) {
+/**
+ * 
+ * @param {number} id string
+ * @param {string} property string
+ * @param {object} disks the disk object
+ * @param {string} value text value
+ */
+function addProperties (id, property, disks, value) {
     if(value === ""){
         delete disks[id][property];
 
     }
-    if(property === "canciones" &&disks[id][property] === undefined) {
+    if(property === "canciones" && disks[id][property] === undefined) {
        disks[id][property] = [].push(value);
 
     }
