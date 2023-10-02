@@ -1,5 +1,5 @@
 const newArray = {
-    length: 4,
+    lengths: 4,
     elements: {
       0: 'taza',
       1: 'plato',
@@ -13,19 +13,17 @@ const newArray = {
     // ver el largo del array 0 
     if (newArray.length === 0) return;
     // Eliminar el primer elem
-    const arrayAsObj = newArray.elements;
-    const deleted_values = [];
-
-    for(let i = 0; i < arrayAsObj.length - 1; i++){
+    let objectElements = newArray.elements;
+    let objectIndex = newArray.lengths;
+    const deletedElements = [];
+    for(let i = 0; i <= objectIndex + 1; i++){
       if(i === 0){
-        arrayAsObj.array.forEach(element, index => {
-          deleted_values.push(element);
-          return;
-        });
+        deletedElements.push(objectElements[i]);
+        objectElements[i] = objectElements[i + 1]
+        objectIndex--
       }
-      arrayAsObj[i] = element
     }
-    
+    console.log(objectElements)
   }
 
   shift(newArray);
