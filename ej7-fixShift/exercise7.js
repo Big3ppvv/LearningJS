@@ -1,4 +1,4 @@
-const newArray = {
+const newObject = {
     lengths: 4,
     elements: {
       0: 'taza',
@@ -9,13 +9,17 @@ const newArray = {
     }
   }
   
-  const shift = (newArray) => { // O(n)
+  const shift = (newObject) => { // O(n)
     // ver el largo del array 0 
-    if (newArray.length === 0) return;
+    if (newObject.length === 0) return;
     // Eliminar el primer elem
-    const deletedElements = [];
+    const deletedValues = []
+    for(key in newObject.elements){
+      
+    }
+    
     
   }
 
-  shift(newArray);
-  shift(newArray);
+  shift(newObject);
+  shift(newObject);
