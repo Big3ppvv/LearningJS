@@ -1,5 +1,5 @@
 const newObject = {
-    lengths: 4,
+    lengths: 5,
     elements: {
       0: 'taza',
       1: 'plato',
@@ -14,11 +14,7 @@ const newObject = {
     if (newObject.length === 0) return;
     // Eliminar el primer elem
     const deletedValues = []
-    for(key in newObject.elements){
-      
-    }
-    
-    
+    const elements = newObject.elements
   }
 
   shift(newObject);
