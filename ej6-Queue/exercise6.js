@@ -1,12 +1,15 @@
 function making_queueWithLoop(array, num){
+    const copy = [];
     const deleted_value = [];
-    for(let i = 0; i <= array.length; i++){
+    for(let i = 0; i < array.length; i++){
         if(i === 0){
-            array.push(num);
-        }
-        
+            deleted_value.push(array[i]) 
+        }else{
+            copy.push(array[i])
+        }   
     }
-       
+    copy.push(num)
+    return copy
 }
    
 const array = [5,6,7];
