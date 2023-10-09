@@ -3,8 +3,8 @@ function makeHexColor(){
     let completeHexCode = "#";
 
     while(completeHexCode.length < 7){
-        index = Math.floor(Math.random() * hexLetters.length);
-        completeHexCode += hexLetters[index].toLocaleUpperCase();
+        index = Math.floor(Math.random() * hexLetters.length); //Para generar numeros aleatorios
+        completeHexCode += hexLetters[index].toLocaleUpperCase(); //Para convertir las letras en Mayusculas
     }
    return completeHexCode;
 }
