@@ -4,7 +4,7 @@ function makeHexColor(){
 
     while(completeHexCode.length < 7){
         index = Math.floor(Math.random() * hexLetters.length); //Para generar numeros aleatorios
-        completeHexCode += hexLetters[index].toLocaleUpperCase(); //Para convertir las letras en Mayusculas
+        completeHexCode += hexLetters[index].toLocaleUpperCase(); //Para convertir las letras en Mayusculasit 
     }
    return completeHexCode;
 }
