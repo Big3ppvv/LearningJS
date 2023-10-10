@@ -13,7 +13,7 @@ const changeColor = document.getElementById("change-botton")
 
 changeColor.addEventListener('click', () => {
     const hexColor = makeHexColor();
-    const bodyElement = document.getElementsByTagName("body")[0];
+    const bodyElement = document.getElementsByTagName("body")[0];//Lo busque en Internet
     const h2Text =  document.getElementById("hex-text");
     bodyElement.style.backgroundColor = hexColor;
     h2Text.innerText = hexColor;
