@@ -1,10 +1,10 @@
 function makeQueueWithLoop(elements, num){
     if(elements.length === 0) return [num];
-    const first_element = [];
+    let firstElement;
     const newQueue = [];
-    for(let i = 0; i < array.length; i++){
+    for(let i = 0; i < numbers.length; i++){
         if(i === 0){
-            first_element.push(elements[i]);
+            firstElement = elements[0];
         }else{
             newQueue.push(elements[i]);
         }
@@ -13,7 +13,8 @@ function makeQueueWithLoop(elements, num){
     return newQueue;
 }   
    
-const array = [5,6,7];
+const numbers = [5,6,7];
 const num = 9;
-const result = makeQueueWithLoop(array, num);
-console.log(result);
+const result = makeQueueWithLoop(numbers, num);
+console.log(makeQueueWithLoop(numbers, 3)); // 6,7,3
+console.log(makeQueueWithLoop(numbers, 9)); // 6,7,9
