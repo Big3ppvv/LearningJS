@@ -8,3 +8,4 @@
 - [Ejercicio-4](./ej4-collectingDisks/README.md)
 - [Ejercicio-5](./ej5-repeated_Value/README.md)
 - [Ejercicio-6](./ej6-Queue/README.md)
+- [Ejercicio-7](./ej7-fixShift/README.md)
