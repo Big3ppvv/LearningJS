@@ -2,29 +2,11 @@
 //derecha y viceversa expresan o tienen el mismo sentido.
 
 function isPalindrome(number){
-  numberOfDigits = Math.floor(Math.log10(number) + 1);
-  switch(numberOfDigits){
-    case 2:
-        var divisionNumber = 10;
-        return divisionNumber;
-    case 3:
-        var divisionNumber = 100;
-        return divisionNumber;
-    case 4:
-        var divisionNumber = 1000;
-        return divisionNumber;
-    case 5:
-        var divisionNumber = 10000;
-        return divisionNumber;
-    case 6:
-        var divisionNumber = 100000;
-        return divisionNumber;
-    case 7:
-        var divisionNumber = 1000000;
-        return divisionNumber;
-  }
+  let numberOfDigits = Math.floor(Math.log10(number) + 1);
+  let divisorNumber = Math.pow(10, numberOfDigits - 1);
+  let palindromeNumber = Math.floor(number / divisorNumber);
+  number = number - palindromeNumber * divisorNumber;
 
 }
-
 const number = 154;
 isPalindrome(number);
