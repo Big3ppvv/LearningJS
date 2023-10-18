@@ -7,7 +7,7 @@ function isPalindrome(number){
     let divisorNumber = Math.pow(10, numberOfDigits - 1);
     let decreaseNumber = Math.floor(number / divisorNumber);
     number = number - decreaseNumber * divisorNumber;
-    if(number === 0){
+    if(number % decreaseNumber === 0){
       return "Is Palidnrome";
       
     }else{
