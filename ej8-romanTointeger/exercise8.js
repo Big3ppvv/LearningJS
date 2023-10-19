@@ -11,8 +11,11 @@ const MAP_VALUES = {
 function romanTointeger(romanNumber) {
   // Iterar sobre cada elemento del array y comparar con el elemento siguiente
   const letters = romanNumber.split("");
-  console.log(letters);
-}
+  const keys = Object.keys(MAP_VALUES);
+  for(let i = 0; i < keys.length; i++){
+    
+  }
 
+}
 const romanNumber = "MCMXCIV";
 romanTointeger(romanNumber);
