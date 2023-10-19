@@ -12,7 +12,7 @@ function romanTointeger(romanNumber) {
   // Iterar sobre cada elemento del array y comparar con el elemento siguiente
   const letters = romanNumber.split("");
   const keys = Object.keys(MAP_VALUES);
-  for(let i = 0; i < keys.length; i++){
+  for(let i = 0; i < keys; i++){
     
   }
 
