@@ -3,7 +3,7 @@ function isPalindrome(number){
     return false
   }
   //Evaluar la cantidad de digitos que tiene
-let numberOfDigits = Math.floor(Math.log10(number) + 1);
+  let numberOfDigits = Math.floor(Math.log10(number) + 1);
 
   //Iterar sobre la cantidad de digitos
   let repetedLoop = 0 ;
@@ -21,6 +21,6 @@ let numberOfDigits = Math.floor(Math.log10(number) + 1);
   }
 }
 
-const number = 898;
+const number = 897;
 const verifyPalindrome = isPalindrome(number);
 console.log(verifyPalindrome);
