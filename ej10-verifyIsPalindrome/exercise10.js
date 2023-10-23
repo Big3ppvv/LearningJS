@@ -1,6 +1,4 @@
 function isPalindrome(number){
-  //Evaluar si es negativo
-
   if(number < 0){
     return false
   }
