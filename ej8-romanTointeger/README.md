@@ -14,7 +14,7 @@ M             1000
 
 ## Solution
 
-It`s was made a funtion that takes a string that represent a Roman Number. Before it was made multiple "if" sentences for a special cases in the Roman numbers. And then it was made a switch control structure for the normal symbols of the Roman numbers.
+It`s was made a funtion that takes a "list of strings" that represent a Roman Number. Thenit was created a hash map that represent tha roman number and the numeric value, and with the split method it was separated the list of strings, and changed the value of the list with the value of the object, all with the for loop. Next it was made another for loop that can rest the next element of the list and the actual , and finally sum all the rest ans return the complete number
 
 
 
