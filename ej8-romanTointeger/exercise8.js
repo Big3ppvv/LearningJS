@@ -24,10 +24,10 @@ function romanTointeger(specificRomanNumber){
             
         }
     }
-    const total = separateRomanNumbers.reduce((total,actualNumber) => total + actualNumber, 0)
-    return total
+    const total = separateRomanNumbers.reduce((total,actualNumber) => total + actualNumber, 0);
+    return total;
 }
 
-const romanNumber = "MCMXCIV";
+const romanNumber = "XVII";
 const integerResult = romanTointeger(romanNumber);
 console.log(integerResult)
