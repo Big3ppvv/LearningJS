@@ -8,14 +8,23 @@ const MAP_VALUES = {
   "M": 1000
 }
 
-function romanTointeger(romanNumber) {
-  // Iterar sobre cada elemento del array y comparar con el elemento siguiente
-  const letters = romanNumber.split("");
-  const keys = Object.keys(MAP_VALUES);
-  for(let i = 0; i < keys; i++){
-    
-  }
+function romanTointeger(romanNumber){
+  //Crear los numeros romanos con sus valores mediante un objeto
 
+  const separateRomanNumbers = romanNumber.split('');
+  const parsedValues = separateRomanNumbers.map((stringNumber) =>{
+    if(!(stringNumber in MAP_VALUES))throw new Error("Invalid roman number");
+    return MAP_VALUES[stringNumber]
+  })
+  const total = parsedValues.reduce((total, currentNumber, currentIndex) =>{
+    if(parsedValues[currentIndex + 1] && parsedValues[currentIndex + 1] > currentNumber){
+      return total - currentNumber
+    }
+    return total + currentNumber;
+  } , 0)
+  return total
 }
-const romanNumber = "MCMXCIV";
-romanTointeger(romanNumber);
+
+const romanNumber = "XIV";
+const integerResult = romanTointeger(romanNumber);
+console.log(integerResult)
