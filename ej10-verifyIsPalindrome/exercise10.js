@@ -1,7 +1,10 @@
 function isPalindrome(number){
+  //Evaluar si es negativo
+
   if(number < 0){
     return false
   }
+  
   //Evaluar la cantidad de digitos que tiene
   const numberOfDigits = Math.floor(Math.log10(number) + 1);
   const half = Math.floor(numberOfDigits / 2);
@@ -15,7 +18,6 @@ function isPalindrome(number){
     }
     return true; 
   }
-  
 }
 
 const number = 897;
