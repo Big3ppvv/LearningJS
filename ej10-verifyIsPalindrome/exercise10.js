@@ -1,22 +1,23 @@
-//Palíndromos son palabras o frases que al leerse de izquierda a 
-//derecha y viceversa expresan o tienen el mismo sentido.
-
 function isPalindrome(number){
-  while(number !== 0){
-    let numberOfDigits = Math.floor(Math.log10(number) + 1);
-    let divisorNumber = Math.pow(10, numberOfDigits - 1);
-    let decreaseNumber = Math.floor(number / divisorNumber);
-    number = number - decreaseNumber * divisorNumber;
-    if(number === 0){
-      return "Is Palidnrome";
-      
-    }else{
-      isPalindrome(number);
-    }
-
+  if(number < 0){
+    return false
   }
+  //Evaluar la cantidad de digitos que tiene
+  const numberOfDigits = Math.floor(Math.log10(number) + 1);
+  const half = Math.floor(numberOfDigits / 2);
+  //Iterar sobre la cantidad de digitos
+  for(let i = 0; i < half; i++){
+    console.log(Math.pow(10, numberOfDigits - i - 1)) % 10;
+    const left = Math.floor(number / Math.pow(10, numberOfDigits - i - 1)) % 10;
+    const right = Math.floor( number/ Math.pow(10, i)) % 10;
+    if (left !== right) {
+      return false;
+    }
+    return true; 
+  }
+  
 }
 
-const number = 9882;
+const number = 897;
 const verifyPalindrome = isPalindrome(number);
 console.log(verifyPalindrome);
