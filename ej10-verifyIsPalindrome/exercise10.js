@@ -8,7 +8,7 @@ function isPalindrome(number){
   const half = Math.floor(numberOfDigits / 2);
   //Iterar sobre la cantidad de digitos
   for(let i = 0; i < half; i++){
-    console.log(Math.pow(10, numberOfDigits - i - 1)) % 10;
+    console.log(Math.pow(10, numberOfDigits - i - 1))
     const left = Math.floor(number / Math.pow(10, numberOfDigits - i - 1)) % 10;
     const right = Math.floor( number/ Math.pow(10, i)) % 10;
     if (left !== right) {
@@ -16,6 +16,7 @@ function isPalindrome(number){
     }
     return true; 
   }
+  
 }
 
 const number = 897;
