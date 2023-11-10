@@ -14,17 +14,17 @@ function romanTointeger(romanNumber){
   const separateRomanNumbers = romanNumber.split('');
   const parsedValues = separateRomanNumbers.map((stringNumber) =>{
     if(!(stringNumber in MAP_VALUES))throw new Error("Invalid roman number");
-    return MAP_VALUES[stringNumber]
+    return MAP_VALUES[stringNumber];
   })
   const total = parsedValues.reduce((total, currentNumber, currentIndex) =>{
     if(parsedValues[currentIndex + 1] && parsedValues[currentIndex + 1] > currentNumber){
-      return total - currentNumber
+      return total - currentNumber;
     }
     return total + currentNumber;
   } , 0)
-  return total
+  return total;
 }
 
 const romanNumber = "XIV";
 const integerResult = romanTointeger(romanNumber);
-console.log(integerResult)
+console.log(integerResult);
