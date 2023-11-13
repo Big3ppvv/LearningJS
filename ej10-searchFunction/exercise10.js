@@ -14,18 +14,33 @@
  */
 const search = (text, word) => {
   // validar que el texto y la palabra no esten vacios
+  if(text.length === 0 || word.length === 0 ) throw Error("You provide an empty Array");
 
   // Crear el objeto que se va a retornar
+  let searchedWord = {
+    word:{
+
+    }
+  };
 
   // Separar el texto en parrafos
-  const paragraphs = text.split('\n')
+  const paragraphs = text.split('\n');
   // Recorrer los parrafos
-  paragraphs
-  // Buscar la palabra en el parrafo
+  paragraphs.forEach((specificParagraph,position) =>{
+    // Buscar la palabra en el parrafo
+    const stringToArray = specificParagraph.split(',')
+    if(word in stringToArray){
+    }
+    // Si la palabra existe en el parrafo, aumentar el contador de la palabra
+  })
+  console.log(searchedWord)
 
-  // Si la palabra existe en el parrafo, agregar el numero del parrafo al arreglo de parrafos
 
-  // Si la palabra existe en el parrafo, aumentar el contador de la palabra
+  
+
+ 
+
+ 
 
   // Retornar el objeto
 }
