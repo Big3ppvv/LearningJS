@@ -17,9 +17,11 @@ const search = (text, word) => {
   if(text.length === 0 || word.length === 0 ) throw Error("You provide an empty Array");
 
   // Crear el objeto que se va a retornar
-  let searchedWord = {
-    word:{
-
+  const searchedWord = {
+    "word":{
+      "specificWord": word, 
+      "count": 0,
+      "paragraphs": []
     }
   };
 
@@ -28,21 +30,15 @@ const search = (text, word) => {
   // Recorrer los parrafos
   paragraphs.forEach((specificParagraph,position) =>{
     // Buscar la palabra en el parrafo
-    const stringToArray = specificParagraph.split(',')
-    if(word in stringToArray){
+    if(specificParagraph.includes(word) ){
+      searchedWord["word"]["paragraphs"].push(position + 1);
+      searchedWord["word"]["count"] += 1
     }
     // Si la palabra existe en el parrafo, aumentar el contador de la palabra
   })
-  console.log(searchedWord)
-
-
-  
-
  
-
- 
-
   // Retornar el objeto
+  return searchedWord;
 }
 
 
@@ -55,7 +51,7 @@ Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Nisl pretium fusc
   Ligula ullamcorper malesuada proin libero nunc. Netus et malesuada fames ac turpis egestas. Amet consectetur adipiscing elit pellentesque habitant morbi. Placerat orci nulla pellentesque dignissim enim. Amet justo donec enim diam vulputate ut pharetra sit amet. Faucibus in ornare quam viverra orci sagittis eu volutpat. Urna molestie at elementum eu facilisis sed. Bibendum est ultricies integer quis auctor elit sed vulputate mi.
   
  Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Mattis nunc sed blandit libero volutpat sed cras. Mauris vitae ultricies leo integer malesuada nunc.
-Sem fringilla ut morbi tincidunt augue interdum velit euismod in. In ornare umbrella quam viverra orci sagittis eu volutpat. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Commodo viverra maecenas accumsan lacus vel facilisis volutpat est velit. Nullam eget felis eget nunc lobortis mattis. Sagittis id consectetur purus ut faucibus pulvinar. Egestas congue quisque egestas diam in arcu cursus euismod.
+Sem fringilla ut morbi tincidunt augue interdum velit euismod in. In ornare umbrella umbrella quam viverra orci sagittis eu volutpat. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Commodo viverra maecenas accumsan lacus vel facilisis volutpat est velit. Nullam eget felis eget nunc lobortis mattis. Sagittis id consectetur purus ut faucibus pulvinar. Egestas congue quisque egestas diam in arcu cursus euismod.
 Habitant morbi tristique senectus et netus. Ultricies mi quis hendrerit dolor magna eget est lorem ipsum. Mollis nunc sed id semper. Orci eu lobortis elementum nibh tellus.
 Ultrices sagittis orci a scelerisque purus semper. Fusce id velit ut tortor pretium. Egestas diam in arcu cursus euismod quis viverra nibh cras. Proin sed libero enim sed. In ante metus dictum at tempor commodo ullamcorper a lacus. Risus ultricies tristique nulla aliquet. Pharetra convallis posuere morbi leo urna. Montes nascetur ridiculus mus mauris vitae ultricies leo. Egestas congue quisque egestas diam in arcu cursus euismod.
 Purus in mollis nunc sed id semper risus in. Massa tincidunt dui ut ornare lectus sit amet est placerat. Placerat duis ultricies lacus sed turpis.
@@ -63,6 +59,6 @@ Purus in mollis nunc sed id semper risus in. Massa tincidunt dui ut ornare lectu
 
 Volutpat odio facilisis mauris sit amet massa vitae tortor condimentum. Convallis aenean et tortor at risus viverra adipiscing at in. Enim diam vulputate ut pharetra sit amet aliquam id diam. Hac habitasse platea dictumst quisque. Semper eget duis at tellus at. Tempus egestas sed sed risus pretium. Sollicitudin aliquam ultrices sagittis orci a scelerisque. Ut tristique et egestas quis ipsum suspendisse ultrices.`
 
-const searchedWord = 'umbrella'
-console.log(search(text, searchedWord))
-
+const searchedWord = 'umbrella';
+const verifyRepeatedWord = search(text, searchedWord);
+console.log(verifyRepeatedWord);
