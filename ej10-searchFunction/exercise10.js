@@ -26,18 +26,29 @@ const search = (text, word) => {
   };
 
   // Separar el texto en parrafos
-  const paragraphs = text.split('\n');
+  const paragraphs = text.split('\n').reduce((accumulator, currentValue) =>{
+    const trimedValue = currentValue.trim();
+    if(trimedValue.length > 0){
+      accumulator.push(trimedValue);
+    }
+    return accumulator;
+  }, []);
+
   // Recorrer los parrafos
   paragraphs.forEach((specificParagraph,position) =>{
     // Buscar la palabra en el parrafo
     if(specificParagraph.includes(word) ){
       searchedWord["word"]["paragraphs"].push(position + 1);
-      searchedWord["word"]["count"] += 1
+      const sanitizedWords = specificParagraph.split(' ').map((word) => word.replace(/[.,:]/g, ''));
+      sanitizedWords.forEach((words) => {
+        if(words === word){
+          searchedWord.word.count ++;
+        }
+      })
     }
-    // Si la palabra existe en el parrafo, aumentar el contador de la palabra
   })
- 
   // Retornar el objeto
+
   return searchedWord;
 }
 
@@ -61,4 +72,4 @@ Volutpat odio facilisis mauris sit amet massa vitae tortor condimentum. Convalli
 
 const searchedWord = 'umbrella';
 const verifyRepeatedWord = search(text, searchedWord);
-console.log(verifyRepeatedWord);
+console.log(verifyRepeatedWord.word.paragraphs);
