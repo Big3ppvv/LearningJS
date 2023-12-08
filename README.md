@@ -10,3 +10,5 @@
 - [Ejercicio-6](./ej6-Queue/README.md)
 - [Ejercicio-7](./ej7-fixShift/README.md)
 - [Ejercicio-8](./ej8-romanTointeger/README.md)
+- [Ejercicio-9](./ej9-batches/README.md)
+- [Ejercicio-10](./ej10-searchFunction/README.md)
