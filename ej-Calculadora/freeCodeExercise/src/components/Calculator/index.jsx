@@ -7,7 +7,6 @@ const Calculator = () => {
   useEffect(()=>{
     const input = document.getElementById('inside-numbers');
     input.value = numberSimbol;
-
   },[numberSimbol])
 
   return (
