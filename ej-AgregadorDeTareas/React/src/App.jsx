@@ -1,6 +1,5 @@
 import AddTasks from "./components/AddTasks"
 
-
 function App() {
  
   return(
