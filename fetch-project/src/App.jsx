@@ -1,9 +1,9 @@
-import FetchUrl from "./components/fetchUrl"
+import ShowVideogames from "./components/ShowVideogames"
 
 function App() {
   return(
     <div>
-      <FetchUrl/>
+      <ShowVideogames/>
     </div>
   )
   
