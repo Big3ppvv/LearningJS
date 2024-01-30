@@ -3,12 +3,6 @@ import InsertNumbersSimbols from "../InsertNumbersSimbols";
 const Calculator = () => {
   const [numberSymbol, setNumberSymbol] = useState('');
 
-  useEffect(() => {
-    const input = document.getElementById('inside-numbers');
-    input.value = numberSymbol;
-
-  },[numberSymbol])
-
   return (
     <div>
       <div className="grid bg-slate-300 rounded-lg w-1/3 h-screen border-white border-2 m-auto mt-32">

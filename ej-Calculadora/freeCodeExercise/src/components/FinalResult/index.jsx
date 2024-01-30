@@ -8,6 +8,8 @@ const FinalResult = ({ onInsert, numbersAndSimbols }) => {
       return eval(value)
       })
       onInsert(evaluation);
+      const inputTag = document.getElementById('inside-numbers');
+      inputTag.value = numberSymbol;
       
     } catch (SyntaxError) {
       onInsert('Put a correct number')
