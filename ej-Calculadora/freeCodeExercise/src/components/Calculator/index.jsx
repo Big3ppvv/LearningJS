@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import InsertNumbersSimbols from "../InsertNumbersSimbols";
 const Calculator = () => {
   const [numberSymbol, setNumberSymbol] = useState('');
