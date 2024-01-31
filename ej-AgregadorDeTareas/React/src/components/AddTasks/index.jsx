@@ -11,7 +11,9 @@ const AddTasks = () =>{
                 <input className="h-10" type="text" name="tasks" id="input-value" placeholder={placeHolderText}/>
                 <ShowOrDelete insertTasks={setTasks} tasks={tasks}/>
             </div>
-            <div className="bg-slate-950 w-50 text-white text-xl rounded-lg" id="task-list"></div>
+            <div className="bg-slate-950 w-1/2 text-white text-xl rounded-lg" id="task-list">
+                
+            </div>
         </div>
     )
 }

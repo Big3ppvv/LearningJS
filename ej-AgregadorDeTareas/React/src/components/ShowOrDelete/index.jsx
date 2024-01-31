@@ -1,8 +1,15 @@
+import AddTasks from "../AddTasks";
+import { createRoot } from 'react-dom/client'; 
+
 const ShowOrDelete = ({ insertTasks, tasks }) =>{
+
     const onAddTasks = (insertTasks, tasks) =>{
-        const input = document.getElementById('input-value').value;
-        insertTasks(input)
-        const tasksDiv = <p>{tasks}</p>;  
+      const input = document.getElementById('input-value').value;
+      insertTasks(input);
+      const paragraph = <p className="text-xl rounded-lg w-1/2">{tasks}</p>;
+      const container = document.getElementById('task-list');
+      const root = createRoot(container);
+      root.render(paragraph);
     }
 
     return(
@@ -12,4 +19,4 @@ const ShowOrDelete = ({ insertTasks, tasks }) =>{
     )
 }
 
-export default ShowOrDelete
+export default ShowOrDelete;
