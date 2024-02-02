@@ -1,20 +1,21 @@
-import AddTasks from "../AddTasks";
-import { createRoot } from 'react-dom/client'; 
+const ShowOrDelete = ({ inputRef, taskListRef }) =>{
+    let tasksList = [];
 
-const ShowOrDelete = ({ insertTasks, tasks }) =>{
-
-    const onAddTasks = (insertTasks, tasks) =>{
-      const input = document.getElementById('input-value').value;
-      insertTasks(input);
-      const paragraph = <p className="text-xl rounded-lg w-1/2">{tasks}</p>;
-      const container = document.getElementById('task-list');
-      const root = createRoot(container);
-      root.render(paragraph);
-    }
+    const onAddTasks = (inputRef, taskListRef) => {
+        const value = inputRef.current.value;
+        tasksList.push(value);
+        tasksList.forEach((value) =>{
+            const paragraph = document.createElement('p');
+            paragraph.textContent = value;
+            paragraph.className = "rounded-lg  text-white text-2xl";
+            taskListRef.current.appendChild(paragraph);
+            tasksList = [];
+        })
+    }  
 
     return(
         <div className="inline">
-            <button onClick={() => onAddTasks(insertTasks, tasks)} className="bg-green-500 mt-4 w-1/2 text-white text-xl p-2">Agregar Tareas</button>
+            <button onClick={() => onAddTasks(inputRef,taskListRef)} className="bg-green-500 mt-4 w-1/3 text-white text-xl p-2">Agregar Tareas</button>
         </div>
     )
 }
