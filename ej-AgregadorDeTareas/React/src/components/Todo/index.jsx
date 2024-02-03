@@ -1,5 +1,5 @@
-const ShowOrDelete = ({ inputRef, taskListRef }) =>{
-    let tasksList = [];
+const Todo = ({ inputRef, taskListRef }) =>{
+    const tasksList = [];
 
     const onAddTasks = (inputRef, taskListRef) => {
         const value = inputRef.current.value;
@@ -20,4 +20,4 @@ const ShowOrDelete = ({ inputRef, taskListRef }) =>{
     )
 }
 
-export default ShowOrDelete;
+export default Todo;

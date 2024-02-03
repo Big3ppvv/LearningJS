@@ -1,10 +1,10 @@
-import AddTasks from "./components/AddTasks"
+import TodoHandler from "./components/TodoHandler"
 
 function App() {
  
   return(
     <div>
-      <AddTasks/>
+      <TodoHandler />
     </div>
   )
  
